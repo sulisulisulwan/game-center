@@ -1,0 +1,104 @@
+
+
+
+.header-title {
+  text-align: center;
+  font-family: 'Rock 3D';
+  padding-bottom: 50px;
+}
+
+.board-wrapper {
+  margin: auto;
+  width: 50%;
+  max-width: 300px;
+  font-size: 70px;
+}
+
+.row-0 {
+  display: grid;
+  grid-template-columns: 100px 100px 100px;
+  min-height: 100px;
+  max-width: 400px;
+}
+.row-1 {
+  display: grid;
+  grid-template-columns: 100px 100px 100px;
+  min-height: 100px;
+  max-width: 400px;
+}
+.row-2 {
+  display: grid;
+  grid-template-columns: 100px 100px 100px;
+  min-height: 100px;
+  max-width: 400px;
+}
+.column-0 {
+  min-height: 100px;
+}
+.row-0.column-0 {
+  border-bottom: 2px solid black;
+  border-right: 2px solid black;
+  vertical-align: center;
+  text-align: center;
+}
+.row-0.column-1 {
+  border-bottom: 2px solid black;
+  border-right: 2px solid black;
+  border-left: 2px solid black;
+  vertical-align: center;
+  text-align: center;
+}
+.row-0.column-2 {
+  border-bottom: 2px solid black;
+  border-left: 2px solid black;
+  vertical-align: center;
+  text-align: center;
+}
+.row-1.column-0 {
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
+  border-right: 2px solid black;
+  vertical-align: center;
+  text-align: center;
+}
+.row-1.column-1 {
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
+  border-right: 2px solid black;
+  border-left: 2px solid black;
+  vertical-align: center;
+  text-align: center;
+}
+.row-1.column-2 {
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
+  border-left: 2px solid black;
+  vertical-align: center;
+  text-align: center;
+}
+
+.row-2.column-0 {
+  border-top: 2px solid black;
+  border-right: 2px solid black;
+  vertical-align: center;
+  text-align: center;
+}
+.row-2.column-1 {
+  border-top: 2px solid black;
+  border-right: 2px solid black;
+  border-left: 2px solid black;
+  vertical-align: center;
+  text-align: center;
+}
+.row-2.column-2 {
+  border-top: 2px solid black;
+  border-left: 2px solid black;
+  vertical-align: center;
+  text-align: center;
+}
+
+.game-status {
+  text-align: center;
+  padding-bottom: 50px;
+  font-size: 30px;
+}
