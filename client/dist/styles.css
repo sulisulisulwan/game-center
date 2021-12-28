@@ -7,97 +7,502 @@
   padding-bottom: 50px;
 }
 
-.board-wrapper {
+
+/**************
+
+TIC TAC TOE 
+
+**************/
+
+.tic-tac-toe.board-wrapper {
   margin: auto;
   width: 50%;
   max-width: 300px;
   font-size: 70px;
 }
 
-.row-0 {
+.tic-tac-toe.row-0 {
   display: grid;
   grid-template-columns: 100px 100px 100px;
   min-height: 100px;
   max-width: 400px;
 }
-.row-1 {
+    .tic-tac-toe.row-0.column-0 {
+      border-bottom: 2px solid black;
+      border-right: 2px solid black;
+      vertical-align: center;
+      text-align: center;
+    }
+    .tic-tac-toe.row-0.column-1 {
+      border-bottom: 2px solid black;
+      border-right: 2px solid black;
+      border-left: 2px solid black;
+      vertical-align: center;
+      text-align: center;
+    }
+    .tic-tac-toe.row-0.column-2 {
+      border-bottom: 2px solid black;
+      border-left: 2px solid black;
+      vertical-align: center;
+      text-align: center;
+    }
+.tic-tac-toe.row-1 {
   display: grid;
   grid-template-columns: 100px 100px 100px;
   min-height: 100px;
   max-width: 400px;
 }
-.row-2 {
+    .tic-tac-toe.row-1.column-0 {
+      border-top: 2px solid black;
+      border-bottom: 2px solid black;
+      border-right: 2px solid black;
+      vertical-align: center;
+      text-align: center;
+    }
+    .tic-tac-toe.row-1.column-1 {
+      border-top: 2px solid black;
+      border-bottom: 2px solid black;
+      border-right: 2px solid black;
+      border-left: 2px solid black;
+      vertical-align: center;
+      text-align: center;
+    }
+    .tic-tac-toe.row-1.column-2 {
+      border-top: 2px solid black;
+      border-bottom: 2px solid black;
+      border-left: 2px solid black;
+      vertical-align: center;
+      text-align: center;
+    }
+.tic-tac-toe.row-2 {
   display: grid;
   grid-template-columns: 100px 100px 100px;
   min-height: 100px;
   max-width: 400px;
 }
-.column-0 {
-  min-height: 100px;
-}
-.row-0.column-0 {
-  border-bottom: 2px solid black;
-  border-right: 2px solid black;
-  vertical-align: center;
+    .tic-tac-toe.row-2.column-0 {
+      border-top: 2px solid black;
+      border-right: 2px solid black;
+      vertical-align: center;
+      text-align: center;
+    }
+    .tic-tac-toe.row-2.column-1 {
+      border-top: 2px solid black;
+      border-right: 2px solid black;
+      border-left: 2px solid black;
+      vertical-align: center;
+      text-align: center;
+    }
+    .tic-tac-toe.row-2.column-2 {
+      border-top: 2px solid black;
+      border-left: 2px solid black;
+      vertical-align: center;
+      text-align: center;
+    }
+.tic-tac-toe.game-status {
   text-align: center;
-}
-.row-0.column-1 {
-  border-bottom: 2px solid black;
-  border-right: 2px solid black;
-  border-left: 2px solid black;
-  vertical-align: center;
-  text-align: center;
-}
-.row-0.column-2 {
-  border-bottom: 2px solid black;
-  border-left: 2px solid black;
-  vertical-align: center;
-  text-align: center;
-}
-.row-1.column-0 {
-  border-top: 2px solid black;
-  border-bottom: 2px solid black;
-  border-right: 2px solid black;
-  vertical-align: center;
-  text-align: center;
-}
-.row-1.column-1 {
-  border-top: 2px solid black;
-  border-bottom: 2px solid black;
-  border-right: 2px solid black;
-  border-left: 2px solid black;
-  vertical-align: center;
-  text-align: center;
-}
-.row-1.column-2 {
-  border-top: 2px solid black;
-  border-bottom: 2px solid black;
-  border-left: 2px solid black;
-  vertical-align: center;
-  text-align: center;
+  padding-bottom: 50px;
+  font-size: 30px;
 }
 
-.row-2.column-0 {
-  border-top: 2px solid black;
-  border-right: 2px solid black;
-  vertical-align: center;
-  text-align: center;
-}
-.row-2.column-1 {
-  border-top: 2px solid black;
-  border-right: 2px solid black;
-  border-left: 2px solid black;
-  vertical-align: center;
-  text-align: center;
-}
-.row-2.column-2 {
-  border-top: 2px solid black;
-  border-left: 2px solid black;
-  vertical-align: center;
-  text-align: center;
+
+/*CONNECT FOUR*/
+
+
+.connect-4.board-wrapper {
+  margin: auto;
+  width: 50%;
+  max-width: 700px;
+  font-size: 70px;
 }
 
-.game-status {
+.connect-4.row-0 {
+  display: grid;
+  grid-template-columns: 100px 100px 100px 100px 100px 100px 100px;
+  min-height: 100px;
+  max-width: 100px;
+}
+    .connect-4.row-0.column-0 {
+      border-bottom: 2px solid black;
+      border-right: 2px solid black;
+      border-left: 2px solid black;
+      vertical-align: center;
+      text-align: center;
+    }
+    .connect-4.row-0.column-1 {
+      border-right: 2px solid black;
+      border-bottom: 2px solid black;
+      border-left: 2px solid black;
+      vertical-align: center;
+      text-align: center;
+    }
+    .connect-4.row-0.column-2 {
+      border-right: 2px solid black;
+      border-bottom: 2px solid black;
+      border-left: 2px solid black;
+      vertical-align: center;
+      text-align: center;
+    }
+    .connect-4.row-0.column-3 {
+      border-bottom: 2px solid black;
+      border-right: 2px solid black;
+      border-left: 2px solid black;
+      vertical-align: center;
+      text-align: center;
+    }
+    .connect-4.row-0.column-4 {
+      border-bottom: 2px solid black;
+      border-right: 2px solid black;
+      border-left: 2px solid black;
+      vertical-align: center;
+      text-align: center;
+    }
+    .connect-4.row-0.column-5 {
+      border-bottom: 2px solid black;
+      border-right: 2px solid black;
+      border-left: 2px solid black;
+      vertical-align: center;
+      text-align: center;
+    }
+    .connect-4.row-0.column-6 {
+      border-bottom: 2px solid black;
+      border-left: 2px solid black;
+      border-right: 2px solid black;
+      vertical-align: center;
+      text-align: center;
+    }
+.connect-4.row-1 {
+  display: grid;
+  grid-template-columns: 100px 100px 100px 100px 100px 100px 100px;
+  min-height: 100px;
+  max-width: 100px;
+}
+    .connect-4.row-1.column-0 {
+      border-bottom: 2px solid black;
+      border-right: 2px solid black;
+      border-left: 2px solid black;
+      vertical-align: center;
+      text-align: center;
+    }
+    .connect-4.row-1.column-1 {
+      border-right: 2px solid black;
+      border-bottom: 2px solid black;
+      border-left: 2px solid black;
+      vertical-align: center;
+      text-align: center;
+    }
+    .connect-4.row-1.column-2 {
+      border-right: 2px solid black;
+      border-bottom: 2px solid black;
+      border-left: 2px solid black;
+      vertical-align: center;
+      text-align: center;
+    }
+    .connect-4.row-1.column-3 {
+      border-bottom: 2px solid black;
+      border-right: 2px solid black;
+      border-left: 2px solid black;
+      vertical-align: center;
+      text-align: center;
+    }
+    .connect-4.row-1.column-4 {
+      border-bottom: 2px solid black;
+      border-right: 2px solid black;
+      border-left: 2px solid black;
+      vertical-align: center;
+      text-align: center;
+    }
+    .connect-4.row-1.column-5 {
+      border-bottom: 2px solid black;
+      border-right: 2px solid black;
+      border-left: 2px solid black;
+      vertical-align: center;
+      text-align: center;
+    }
+    .connect-4.row-1.column-6 {
+      border-bottom: 2px solid black;
+      border-left: 2px solid black;
+      border-right: 2px solid black;
+      vertical-align: center;
+      text-align: center;
+    }
+.connect-4.row-2 {
+  display: grid;
+  grid-template-columns: 100px 100px 100px 100px 100px 100px 100px;
+  min-height: 100px;
+  max-width: 100px;
+}
+    .connect-4.row-2.column-0 {
+      border-bottom: 2px solid black;
+      border-right: 2px solid black;
+      border-left: 2px solid black;
+      vertical-align: center;
+      text-align: center;
+    }
+    .connect-4.row-2.column-1 {
+      border-right: 2px solid black;
+      border-bottom: 2px solid black;
+      border-left: 2px solid black;
+      vertical-align: center;
+      text-align: center;
+    }
+    .connect-4.row-2.column-2 {
+      border-right: 2px solid black;
+      border-bottom: 2px solid black;
+      border-left: 2px solid black;
+      vertical-align: center;
+      text-align: center;
+    }
+    .connect-4.row-2.column-3 {
+      border-bottom: 2px solid black;
+      border-right: 2px solid black;
+      border-left: 2px solid black;
+      vertical-align: center;
+      text-align: center;
+    }
+    .connect-4.row-2.column-4 {
+      border-bottom: 2px solid black;
+      border-right: 2px solid black;
+      border-left: 2px solid black;
+      vertical-align: center;
+      text-align: center;
+    }
+    .connect-4.row-2.column-5 {
+      border-bottom: 2px solid black;
+      border-right: 2px solid black;
+      border-left: 2px solid black;
+      vertical-align: center;
+      text-align: center;
+    }
+    .connect-4.row-2.column-6 {
+      border-bottom: 2px solid black;
+      border-left: 2px solid black;
+      border-right: 2px solid black;
+      vertical-align: center;
+      text-align: center;
+    }
+.connect-4.row-3 {
+  display: grid;
+  grid-template-columns: 100px 100px 100px 100px 100px 100px 100px;
+  min-height: 100px;
+  max-width: 100px;
+}
+    .connect-4.row-3.column-0 {
+      border-bottom: 2px solid black;
+      border-right: 2px solid black;
+      border-left: 2px solid black;
+      vertical-align: center;
+      text-align: center;
+    }
+    .connect-4.row-3.column-1 {
+      border-right: 2px solid black;
+      border-bottom: 2px solid black;
+      border-left: 2px solid black;
+      vertical-align: center;
+      text-align: center;
+    }
+    .connect-4.row-3.column-2 {
+      border-right: 2px solid black;
+      border-bottom: 2px solid black;
+      border-left: 2px solid black;
+      vertical-align: center;
+      text-align: center;
+    }
+    .connect-4.row-3.column-3 {
+      border-bottom: 2px solid black;
+      border-right: 2px solid black;
+      border-left: 2px solid black;
+      vertical-align: center;
+      text-align: center;
+    }
+    .connect-4.row-3.column-4 {
+      border-bottom: 2px solid black;
+      border-right: 2px solid black;
+      border-left: 2px solid black;
+      vertical-align: center;
+      text-align: center;
+    }
+    .connect-4.row-3.column-5 {
+      border-bottom: 2px solid black;
+      border-right: 2px solid black;
+      border-left: 2px solid black;
+      vertical-align: center;
+      text-align: center;
+    }
+    .connect-4.row-3.column-6 {
+      border-bottom: 2px solid black;
+      border-left: 2px solid black;
+      border-right: 2px solid black;
+      vertical-align: center;
+      text-align: center;
+    }
+.connect-4.row-4 {
+  display: grid;
+  grid-template-columns: 100px 100px 100px 100px 100px 100px 100px;
+  min-height: 100px;
+  max-width: 100px;
+}
+    .connect-4.row-4.column-0 {
+      border-bottom: 2px solid black;
+      border-right: 2px solid black;
+      border-left: 2px solid black;
+      vertical-align: center;
+      text-align: center;
+    }
+    .connect-4.row-4.column-1 {
+      border-right: 2px solid black;
+      border-bottom: 2px solid black;
+      border-left: 2px solid black;
+      vertical-align: center;
+      text-align: center;
+    }
+    .connect-4.row-4.column-2 {
+      border-right: 2px solid black;
+      border-bottom: 2px solid black;
+      border-left: 2px solid black;
+      vertical-align: center;
+      text-align: center;
+    }
+    .connect-4.row-4.column-3 {
+      border-bottom: 2px solid black;
+      border-right: 2px solid black;
+      border-left: 2px solid black;
+      vertical-align: center;
+      text-align: center;
+    }
+    .connect-4.row-4.column-4 {
+      border-bottom: 2px solid black;
+      border-right: 2px solid black;
+      border-left: 2px solid black;
+      vertical-align: center;
+      text-align: center;
+    }
+    .connect-4.row-4.column-5 {
+      border-bottom: 2px solid black;
+      border-right: 2px solid black;
+      border-left: 2px solid black;
+      vertical-align: center;
+      text-align: center;
+    }
+    .connect-4.row-4.column-6 {
+      border-bottom: 2px solid black;
+      border-left: 2px solid black;
+      border-right: 2px solid black;
+      vertical-align: center;
+      text-align: center;
+    }
+.connect-4.row-5 {
+  display: grid;
+  grid-template-columns: 100px 100px 100px 100px 100px 100px 100px;
+  min-height: 100px;
+  max-width: 100px;
+}
+    .connect-4.row-5.column-0 {
+      border-bottom: 2px solid black;
+      border-right: 2px solid black;
+      border-left: 2px solid black;
+      vertical-align: center;
+      text-align: center;
+    }
+    .connect-4.row-5.column-1 {
+      border-right: 2px solid black;
+      border-bottom: 2px solid black;
+      border-left: 2px solid black;
+      vertical-align: center;
+      text-align: center;
+    }
+    .connect-4.row-5.column-2 {
+      border-right: 2px solid black;
+      border-bottom: 2px solid black;
+      border-left: 2px solid black;
+      vertical-align: center;
+      text-align: center;
+    }
+    .connect-4.row-5.column-3 {
+      border-bottom: 2px solid black;
+      border-right: 2px solid black;
+      border-left: 2px solid black;
+      vertical-align: center;
+      text-align: center;
+    }
+    .connect-4.row-5.column-4 {
+      border-bottom: 2px solid black;
+      border-right: 2px solid black;
+      border-left: 2px solid black;
+      vertical-align: center;
+      text-align: center;
+    }
+    .connect-4.row-5.column-5 {
+      border-bottom: 2px solid black;
+      border-right: 2px solid black;
+      border-left: 2px solid black;
+      vertical-align: center;
+      text-align: center;
+    }
+    .connect-4.row-5.column-6 {
+      border-bottom: 2px solid black;
+      border-right: 2px solid black;
+      border-left: 2px solid black;
+      vertical-align: center;
+      text-align: center;
+    }
+.connect-4.row-4 {
+  display: grid;
+  grid-template-columns: 100px 100px 100px 100px 100px 100px 100px;
+  min-height: 100px;
+  max-width: 100px;
+}
+    .connect-4.row-6.column-0 {
+      border-bottom: 2px solid black;
+      border-right: 2px solid black;
+      border-left: 2px solid black;
+      vertical-align: center;
+      text-align: center;
+    }
+    .connect-4.row-6.column-1 {
+      border-right: 2px solid black;
+      border-bottom: 2px solid black;
+      border-left: 2px solid black;
+      vertical-align: center;
+      text-align: center;
+    }
+    .connect-4.row-6.column-2 {
+      border-right: 2px solid black;
+      border-bottom: 2px solid black;
+      border-left: 2px solid black;
+      vertical-align: center;
+      text-align: center;
+    }
+    .connect-4.row-6.column-3 {
+      border-bottom: 2px solid black;
+      border-right: 2px solid black;
+      border-left: 2px solid black;
+      vertical-align: center;
+      text-align: center;
+    }
+    .connect-4.row-6.column-4 {
+      border-bottom: 2px solid black;
+      border-right: 2px solid black;
+      border-left: 2px solid black;
+      vertical-align: center;
+      text-align: center;
+    }
+    .connect-4.row-6.column-5 {
+      border-bottom: 2px solid black;
+      border-right: 2px solid black;
+      border-left: 2px solid black;
+      vertical-align: center;
+      text-align: center;
+    }
+    .connect-4.row-6.column-6 {
+      border-bottom: 2px solid black;
+      border-left: 2px solid black;
+      border-right: 2px solid black;
+      vertical-align: center;
+      text-align: center;
+    }
+
+.connect-4.game-status {
   text-align: center;
   padding-bottom: 50px;
   font-size: 30px;

@@ -2,10 +2,106 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
-/***/ "./boards/boards.js":
-/*!**************************!*\
-  !*** ./boards/boards.js ***!
-  \**************************/
+/***/ "./src/App.jsx":
+/*!*********************!*\
+  !*** ./src/App.jsx ***!
+  \*********************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var _tic_tac_toe_TicTacToe_jsx__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./tic-tac-toe/TicTacToe.jsx */ "./src/tic-tac-toe/TicTacToe.jsx");
+/* harmony import */ var _connect_4_Connect4_jsx__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./connect-4/Connect4.jsx */ "./src/connect-4/Connect4.jsx");
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+function _iterableToArrayLimit(arr, i) { var _i = arr == null ? null : typeof Symbol !== "undefined" && arr[Symbol.iterator] || arr["@@iterator"]; if (_i == null) return; var _arr = []; var _n = true; var _d = false; var _s, _e; try { for (_i = _i.call(arr); !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+
+
+
+
+var games = {
+  'tic-tac-toe': /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_tic_tac_toe_TicTacToe_jsx__WEBPACK_IMPORTED_MODULE_1__["default"], null),
+  'connect-4': /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_connect_4_Connect4_jsx__WEBPACK_IMPORTED_MODULE_2__["default"], null)
+};
+
+var App = function App() {
+  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(null),
+      _useState2 = _slicedToArray(_useState, 2),
+      game = _useState2[0],
+      setGame = _useState2[1];
+
+  var handleSelectChange = function handleSelectChange(e) {
+    setGame(e.target.value);
+  };
+
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, "Select Game:", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("select", {
+    onChange: handleSelectChange
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("option", {
+    value: ""
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("option", {
+    value: "tic-tac-toe"
+  }, "Tic Tac Toe"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("option", {
+    value: "connect-4"
+  }, "Connect 4")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("hr", null), games[game]);
+};
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (App);
+
+/***/ }),
+
+/***/ "./src/boards/Board.jsx":
+/*!******************************!*\
+  !*** ./src/boards/Board.jsx ***!
+  \******************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+
+
+var Board = function Board(_ref) {
+  var board = _ref.board,
+      gameName = _ref.gameName,
+      handleClickSquare = _ref.handleClickSquare;
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    className: "".concat(gameName, " board-wrapper")
+  }, board.map(function (row, i) {
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+      className: "".concat(gameName, " row-").concat(i),
+      key: "".concat(gameName, " rowkey").concat(i)
+    }, row.map(function (square, j) {
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+        className: "".concat(gameName, " row-").concat(i, " column-").concat(j),
+        key: "".concat(gameName, " rowcolkey").concat(i).concat(j),
+        onClick: handleClickSquare
+      }, square);
+    }));
+  }));
+};
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Board);
+
+/***/ }),
+
+/***/ "./src/boards/boardBuilder.js":
+/*!************************************!*\
+  !*** ./src/boards/boardBuilder.js ***!
+  \************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -42,6 +138,7 @@ var BoardMatrixBuilder = /*#__PURE__*/function () {
         board.push(row);
       }
 
+      console.log(board);
       return board;
     }
   }]);
@@ -53,10 +150,10 @@ var BoardMatrixBuilder = /*#__PURE__*/function () {
 
 /***/ }),
 
-/***/ "./src/App.jsx":
-/*!*********************!*\
-  !*** ./src/App.jsx ***!
-  \*********************/
+/***/ "./src/connect-4/Connect4.jsx":
+/*!************************************!*\
+  !*** ./src/connect-4/Connect4.jsx ***!
+  \************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -64,7 +161,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var _tic_tac_toe_TicTacToe_jsx__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./tic-tac-toe/TicTacToe.jsx */ "./src/tic-tac-toe/TicTacToe.jsx");
+/* harmony import */ var _boards_boardBuilder__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../boards/boardBuilder */ "./src/boards/boardBuilder.js");
+/* harmony import */ var _boards_Board_jsx__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../boards/Board.jsx */ "./src/boards/Board.jsx");
+/* harmony import */ var _components_GameStatus_jsx__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/GameStatus.jsx */ "./src/connect-4/components/GameStatus.jsx");
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
 
 function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
@@ -80,30 +179,69 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 
-var games = {
-  'tic-tac-toe': /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_tic_tac_toe_TicTacToe_jsx__WEBPACK_IMPORTED_MODULE_1__["default"], null)
-};
 
-var App = function App() {
-  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(null),
+
+var BoardBuilder = new _boards_boardBuilder__WEBPACK_IMPORTED_MODULE_1__["default"](7, 6, '');
+var Connect4Board = BoardBuilder.buildBoard();
+
+var Connect4 = function Connect4() {
+  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(true),
       _useState2 = _slicedToArray(_useState, 2),
-      game = _useState2[0],
-      setGame = _useState2[1];
+      isRedTurn = _useState2[0],
+      setIsRedTurn = _useState2[1];
 
-  var handleSelectChange = function handleSelectChange(e) {
-    setGame(e.target.value);
+  var _useState3 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)('noDraw'),
+      _useState4 = _slicedToArray(_useState3, 2),
+      gameStatus = _useState4[0],
+      setGameStatus = _useState4[1];
+
+  var _useState5 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(Connect4Board),
+      _useState6 = _slicedToArray(_useState5, 2),
+      board = _useState6[0],
+      updateBoard = _useState6[1];
+
+  var gameName = 'connect-4';
+
+  var handleClickSquare = function handleClickSquare(e) {
+    console.log(e);
   };
 
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, "Select Game:", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("select", {
-    onChange: handleSelectChange
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("option", {
-    value: ""
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("option", {
-    value: "tic-tac-toe"
-  }, "Tic Tac Toe")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("hr", null), games[game]);
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("header", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h1", {
+    className: "header-title"
+  }, "Connect Four")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_GameStatus_jsx__WEBPACK_IMPORTED_MODULE_3__["default"], {
+    gameName: gameName
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_boards_Board_jsx__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    board: board,
+    gameName: gameName,
+    handleClickSquare: handleClickSquare
+  }));
 };
 
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (App);
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Connect4);
+
+/***/ }),
+
+/***/ "./src/connect-4/components/GameStatus.jsx":
+/*!*************************************************!*\
+  !*** ./src/connect-4/components/GameStatus.jsx ***!
+  \*************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+
+
+var GameStatus = function GameStatus(_ref) {
+  var gameName = _ref.gameName;
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    className: "".concat(gameName, " game-status")
+  }, "Game Status");
+};
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (GameStatus);
 
 /***/ }),
 
@@ -118,10 +256,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var _components_Board_jsx__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/Board.jsx */ "./src/tic-tac-toe/components/Board.jsx");
-/* harmony import */ var _components_GameStatus_jsx__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/GameStatus.jsx */ "./src/tic-tac-toe/components/GameStatus.jsx");
-/* harmony import */ var _checkWinner_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./checkWinner.js */ "./src/tic-tac-toe/checkWinner.js");
-/* harmony import */ var _boards_boards_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../boards/boards.js */ "./boards/boards.js");
+/* harmony import */ var _boards_Board_jsx__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../boards/Board.jsx */ "./src/boards/Board.jsx");
+/* harmony import */ var _boards_boardBuilder_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../boards/boardBuilder.js */ "./src/boards/boardBuilder.js");
+/* harmony import */ var _components_GameStatus_jsx__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/GameStatus.jsx */ "./src/tic-tac-toe/components/GameStatus.jsx");
+/* harmony import */ var _checkWinner_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./checkWinner.js */ "./src/tic-tac-toe/checkWinner.js");
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
 
 function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
@@ -140,7 +278,7 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 
-var BoardBuilder = new _boards_boards_js__WEBPACK_IMPORTED_MODULE_4__["default"](3, 3, '');
+var BoardBuilder = new _boards_boardBuilder_js__WEBPACK_IMPORTED_MODULE_2__["default"](3, 3, '');
 var TicTacToeBoard = BoardBuilder.buildBoard();
 
 var TicTacToe = function TicTacToe() {
@@ -159,8 +297,9 @@ var TicTacToe = function TicTacToe() {
       board = _useState6[0],
       updateBoard = _useState6[1];
 
+  var gameName = 'tic-tac-toe';
   (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
-    var status = (0,_checkWinner_js__WEBPACK_IMPORTED_MODULE_3__["default"])(board);
+    var status = (0,_checkWinner_js__WEBPACK_IMPORTED_MODULE_4__["default"])(board);
 
     if (status !== 'noDraw') {
       setGameStatus(status);
@@ -185,11 +324,13 @@ var TicTacToe = function TicTacToe() {
 
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("header", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h1", {
     className: "header-title"
-  }, "Tic Tac Toe")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_GameStatus_jsx__WEBPACK_IMPORTED_MODULE_2__["default"], {
+  }, "Tic Tac Toe")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_GameStatus_jsx__WEBPACK_IMPORTED_MODULE_3__["default"], {
+    gameName: gameName,
     isXTurn: isXTurn,
     gameStatus: gameStatus
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_Board_jsx__WEBPACK_IMPORTED_MODULE_1__["default"], {
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_boards_Board_jsx__WEBPACK_IMPORTED_MODULE_1__["default"], {
     board: board,
+    gameName: gameName,
     handleClickSquare: handleClickSquare
   }));
 };
@@ -314,73 +455,6 @@ var checkForWinner = function checkForWinner(board) {
 
 /***/ }),
 
-/***/ "./src/tic-tac-toe/components/Board.jsx":
-/*!**********************************************!*\
-  !*** ./src/tic-tac-toe/components/Board.jsx ***!
-  \**********************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-
-
-var Board = function Board(_ref) {
-  var board = _ref.board,
-      handleClickSquare = _ref.handleClickSquare;
-  var row1col1 = board[0][0];
-  var row1col2 = board[0][1];
-  var row1col3 = board[0][2];
-  var row2col1 = board[1][0];
-  var row2col2 = board[1][1];
-  var row2col3 = board[1][2];
-  var row3col1 = board[2][0];
-  var row3col2 = board[2][1];
-  var row3col3 = board[2][2];
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: "board-wrapper"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: "row-1"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: "row-0 column-0",
-    onClick: handleClickSquare
-  }, row1col1), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: "row-0 column-1",
-    onClick: handleClickSquare
-  }, row1col2), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: "row-0 column-2",
-    onClick: handleClickSquare
-  }, row1col3)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: "row-2"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: "row-1 column-0",
-    onClick: handleClickSquare
-  }, row2col1), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: "row-1 column-1",
-    onClick: handleClickSquare
-  }, row2col2), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: "row-1 column-2",
-    onClick: handleClickSquare
-  }, row2col3)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: "row-2"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: "row-2 column-0",
-    onClick: handleClickSquare
-  }, row3col1), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: "row-2 column-1",
-    onClick: handleClickSquare
-  }, row3col2), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: "row-2 column-2",
-    onClick: handleClickSquare
-  }, row3col3)));
-};
-
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Board);
-
-/***/ }),
-
 /***/ "./src/tic-tac-toe/components/GameStatus.jsx":
 /*!***************************************************!*\
   !*** ./src/tic-tac-toe/components/GameStatus.jsx ***!
@@ -396,9 +470,10 @@ __webpack_require__.r(__webpack_exports__);
 
 var GameStatus = function GameStatus(_ref) {
   var isXTurn = _ref.isXTurn,
+      gameName = _ref.gameName,
       gameStatus = _ref.gameStatus;
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: "game-status"
+    className: "".concat(gameName, " game-status")
   }, gameStatus === 'noDraw' ? "It is ".concat(isXTurn ? 'X' : 'O', "'s turn") : gameStatus === 'draw' ? 'Game is a Draw!' : "".concat(gameStatus, " is the WINNER!"));
 };
 

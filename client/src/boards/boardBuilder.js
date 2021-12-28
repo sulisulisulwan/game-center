@@ -14,6 +14,7 @@ class BoardMatrixBuilder {
       }
       board.push(row);
     }
+    console.log(board)
     return board;
   }
 }

@@ -1,9 +1,9 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
-import Board from './components/Board.jsx'
+import Board from '../boards/Board.jsx'
+import BoardMatrixBuilder from '../boards/boardBuilder.js';
 import GameStatus from './components/GameStatus.jsx'
 import checkForWinner from './checkWinner.js';
-import BoardMatrixBuilder from '../../boards/boards.js';
 
 const BoardBuilder = new BoardMatrixBuilder(3, 3, '');
 const TicTacToeBoard = BoardBuilder.buildBoard();
@@ -13,6 +13,7 @@ const TicTacToe = () => {
 	const [ isXTurn, setIsXTurn] = useState(true);
 	const [ gameStatus, setGameStatus ] = useState('noDraw')
 	const [ board, updateBoard ] = useState(TicTacToeBoard);
+	const gameName = 'tic-tac-toe';
 
 	useEffect(() => {
 		const status = checkForWinner(board);
@@ -40,8 +41,8 @@ const TicTacToe = () => {
 			<header>
 				<h1 className="header-title">Tic Tac Toe</h1>
 			</header>
-			<GameStatus isXTurn={isXTurn} gameStatus={gameStatus}/>
-			<Board board={board} handleClickSquare={handleClickSquare}/>
+			<GameStatus gameName={gameName} isXTurn={isXTurn} gameStatus={gameStatus}/>
+			<Board board={board} gameName={gameName} handleClickSquare={handleClickSquare}/>
 		</div>
 	)
 }
