@@ -23,8 +23,9 @@ const TicTacToe = () => {
 	}, [board])
 
 	const handleClickSquare = (e) => {
-		const row = Number(e.target.className[4]);
-		const column = Number(e.target.className[13]);
+		console.log(e.target.className)
+		const row = Number(e.target.className[16]);
+		const column = Number(e.target.className[25]);
 		if (board[row][column].length) {
 			//if square is filled, do nothing
 			return

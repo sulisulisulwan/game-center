@@ -307,8 +307,9 @@ var TicTacToe = function TicTacToe() {
   }, [board]);
 
   var handleClickSquare = function handleClickSquare(e) {
-    var row = Number(e.target.className[4]);
-    var column = Number(e.target.className[13]);
+    console.log(e.target.className);
+    var row = Number(e.target.className[16]);
+    var column = Number(e.target.className[25]);
 
     if (board[row][column].length) {
       //if square is filled, do nothing
